@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "537644131880",
+    "firebase_url": "https://eshop-31dd9.firebaseio.com",
+    "project_id": "eshop-31dd9",
+    "storage_bucket": "eshop-31dd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537644131880:android:f14c576b2e45685f04371d",
+        "android_client_info": {
+          "package_name": "com.marg.eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537644131880-lbtvdkqbbor25m8oq8jph6orbnlvuimk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNJ5TMBJPluTlKMfh7bc2PPw-4K509DJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537644131880-lbtvdkqbbor25m8oq8jph6orbnlvuimk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
