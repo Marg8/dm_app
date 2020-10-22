@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  palette_generator: ^0.2.0
   cupertino_icons: ^0.1.2
   cloud_firestore: ^0.13.2+1
   firebase_auth: ^0.15.4
@@ -42,6 +42,8 @@ flutter:
     - images/admin.png
     - images/cash.png
     - images/dm.png
+    - images/dmblack.png
+
 
 
 

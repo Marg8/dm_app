@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Admin/adminShiftOrders.dart';
+import 'package:e_shop/Store/storehome.dart';
 import 'package:e_shop/Widgets/loadingWidget.dart';
 import 'package:e_shop/main.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -38,7 +39,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
         flexibleSpace: Container(
           decoration: new BoxDecoration(
             gradient: new LinearGradient(
-              colors: [Colors.blue, Colors.lightBlue],
+              colors: [Color(theme),Color(theme)],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -47,15 +48,16 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.border_color, color: Colors.white,),
+          icon: Icon(Icons.border_color, color: Colors.black,),
           onPressed: () {
             Route route = MaterialPageRoute(builder: (c) => AdminShiftOrders());
             Navigator.pushReplacement(context, route);
           },
         ),
+
         actions: [
           FlatButton(
-            child: Text("Logout", style: TextStyle(color: Colors.white,
+            child: Text("Logout", style: TextStyle(color: Colors.black,
               fontSize: 16.0,
               fontWeight: FontWeight.bold,),),
             onPressed: () {
@@ -73,7 +75,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
     return Container(
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
-          colors: [Colors.blue, Colors.lightBlue],
+          colors: [Color(theme),Color(theme)],
           begin: const FractionalOffset(0.0, 0.0),
           end: const FractionalOffset(1.0, 0.0),
           stops: [0.0, 1.0],
@@ -84,15 +86,15 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.shop_two, color: Colors.white, size: 200.0,),
+            Icon(Icons.shop_two, color: Colors.black, size: 200.0,),
             Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: RaisedButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(9.0)),
                 child: Text("Add New Product",
-                  style: TextStyle(fontSize: 20.0, color: Colors.black),),
-                color: Colors.white,
+                  style: TextStyle(fontSize: 20.0, color: Colors.white),),
+                color: Colors.black,
                 onPressed: () => takeImage(context),
               ),
             )
@@ -161,7 +163,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
        flexibleSpace: Container(
          decoration: new BoxDecoration(
            gradient: new LinearGradient(
-             colors: [Colors.blue, Colors.lightBlue],
+             colors: [Color(theme),Color(theme)],
              begin: const FractionalOffset(0.0, 0.0),
              end: const FractionalOffset(1.0, 0.0),
              stops: [0.0, 1.0],
@@ -169,13 +171,13 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
            ),
          ),
        ),
-       leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.white,),
+       leading: IconButton(icon: Icon(Icons.arrow_back, color: Colors.black,),
        onPressed: clearFormInfo),
-       title: Text("New Product", style: TextStyle(color: Colors.white, fontSize: 24.0, fontWeight: FontWeight.bold,),),
+       title: Text("New Product", style: TextStyle(color: Colors.black, fontSize: 24.0, fontWeight: FontWeight.bold,),),
        actions: [
          FlatButton(
            onPressed: uploading ? null : () => uploadImageAndSaveItemInfo(),
-           child: Text("Add", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold,),),
+           child: Text("Add", style: TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.bold,),),
          )
        ],
      ),

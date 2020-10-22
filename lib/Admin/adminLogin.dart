@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Admin/uploadItems.dart';
 import 'package:e_shop/Authentication/authenication.dart';
+import 'package:e_shop/Store/storehome.dart';
 import 'package:e_shop/Widgets/customTextField.dart';
 import 'package:e_shop/DialogBox/errorDialog.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class AdminSignInPage extends StatelessWidget {
           flexibleSpace: Container(
             decoration: new BoxDecoration(
               gradient: new LinearGradient(
-                colors: [Colors.blue, Colors.lightBlue],
+                colors: [Color(theme),Color(theme)],
                 begin: const FractionalOffset(0.0, 0.0),
                 end: const FractionalOffset(1.0, 0.0),
                 stops: [0.0, 1.0],
@@ -27,8 +28,8 @@ class AdminSignInPage extends StatelessWidget {
             ),
           ),
           title: Text(
-            "e-Shop",
-            style: TextStyle(fontSize: 55.0,color: Colors.white,fontFamily: "Signatra"),
+            "dm Regalos",
+            style: TextStyle(fontSize: 55.0,color: Colors.black,fontFamily: "Signatra"),
           ),
           centerTitle: true,
         ),
@@ -60,7 +61,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
       child: Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
-            colors: [Colors.blue, Colors.lightBlue],
+            colors: [Color(theme),Color(theme)],
             begin: const FractionalOffset(0.0, 0.0),
             end: const FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -72,7 +73,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
           children: [
             Container(
               alignment: Alignment.bottomCenter,
-              child: Image.asset("images/login.png",
+              child: Image.asset("images/dm.png",
                 height: 240.0,
                 width: 240.0,
               ),
@@ -80,7 +81,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text("Admin",
-                  style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Colors.black, fontSize: 28.0, fontWeight: FontWeight.bold),
               ),
             ),
             Form(
@@ -115,7 +116,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
                     }
                 );
               },
-              color: Colors.blue,
+              color: Colors.black,
               child: Text("Login", style: TextStyle(color: Colors.white),),
             ),
             SizedBox(
@@ -124,7 +125,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
             Container(
               height: 4.0,
               width: _screenWidth * 0.8,
-              color: Colors.blue,
+              color: Colors.black,
             ),
             SizedBox(
               height: 10.0,
@@ -132,9 +133,9 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
             FlatButton.icon(
               onPressed: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) => AuthenticScreen())),
-              icon: (Icon(Icons.nature_people, color: Colors.white,)),
+              icon: (Icon(Icons.nature_people, color: Colors.black,)),
               label: Text("i'm not admin", style: TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.bold),),
+                  color: Colors.black, fontWeight: FontWeight.bold),),
             ),
             SizedBox(
               height: 50.0,

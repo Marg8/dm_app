@@ -45,7 +45,7 @@ class _LoginState extends State<Login>
           children: [
             Container(
               alignment: Alignment.bottomCenter,
-              child: Image.asset("images/login.png",
+              child: Image.asset("images/dm.png",
                 height: 240.0,
                 width: 240.0,
               ),
@@ -53,7 +53,7 @@ class _LoginState extends State<Login>
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text("Login to your account",
-                  style: TextStyle(color: Colors.white)
+                  style: TextStyle(color: Colors.black)
               ),
             ),
             Form(
@@ -76,6 +76,7 @@ class _LoginState extends State<Login>
                 ],
               ),
             ),
+
             RaisedButton(
               onPressed: () {
                 _emailTextEditingController.text.isNotEmpty &&
@@ -87,7 +88,7 @@ class _LoginState extends State<Login>
                 }
                 );
               },
-              color: Colors.blue,
+              color: Colors.black,
               child: Text("Login", style: TextStyle(color: Colors.white),),
             ),
             SizedBox(
@@ -96,7 +97,7 @@ class _LoginState extends State<Login>
             Container(
               height: 4.0,
               width: _screenWidth * 0.8,
-              color: Colors.blue,
+              color: Colors.black,
             ),
             SizedBox(
               height: 10.0,

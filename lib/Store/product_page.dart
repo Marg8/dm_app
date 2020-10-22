@@ -88,7 +88,7 @@ class _ProductPageState extends State<ProductPage> {
                         onTap: () => checkItemInCart(widget.itemModel.shortInfo, context),
                         child: Container(
                           decoration: new BoxDecoration(
-                            gradient: new LinearGradient(colors: [Colors.blue, Colors.lightBlue],
+                            gradient: new LinearGradient(colors: [Colors.black, Colors.black],
                               begin: const FractionalOffset(0.0, 0.0),
                               end: const FractionalOffset(1.0, 0.0),
                               stops: [0.0, 1.0],

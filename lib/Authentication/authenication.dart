@@ -1,3 +1,4 @@
+import 'package:e_shop/Store/storehome.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'login.dart';
@@ -23,7 +24,7 @@ class _AuthenticScreenState extends State<AuthenticScreen> {
           flexibleSpace: Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
-            colors: [Colors.blue, Colors.lightBlue],
+            colors: [Color(theme),Color(theme)],
             begin: const FractionalOffset(0.0, 0.0),
             end: const FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -31,30 +32,32 @@ class _AuthenticScreenState extends State<AuthenticScreen> {
             ),
            ),
           ),
+
           title: Text(
-            "DM Online",
-            style: TextStyle(fontSize: 55.0,color: Colors.white,fontFamily: "Signatra"),
+            "",
+            style: TextStyle(fontSize: 65.0,color: Colors.black,fontFamily: "Signatra"),
           ),
+
           centerTitle: true,
-          bottom: TabBar(
+          bottom: TabBar(labelColor: Colors.black,
             tabs: [
               Tab(
-                icon: Icon(Icons.lock, color: Colors.white,),
+                icon: Icon(Icons.lock, color: Colors.black,),
                 text: "Login",
               ),
-              Tab(icon: Icon(Icons.perm_contact_calendar, color: Colors.white,),
-
+              Tab(icon: Icon(Icons.perm_contact_calendar, color: Colors.black,),
                 text: "Register",
               ),
+
             ],
-            indicatorColor: Colors.white38,
+            indicatorColor: Colors.black,
             indicatorWeight: 5.0,
           ),
         ),
         body: Container(
           decoration: BoxDecoration(
             gradient: new LinearGradient
-              (colors: [Colors.blue, Colors.lightBlue],
+              (colors: [Colors.white12, Colors.white12],
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             ),

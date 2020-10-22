@@ -1,5 +1,7 @@
+import 'package:e_shop/Config/config.dart';
 import 'package:e_shop/Store/cart.dart';
 import 'package:e_shop/Counters/cartitemcounter.dart';
+import 'package:e_shop/Store/storehome.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,11 +16,11 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget
   Widget build(BuildContext context) {
     return AppBar(
       iconTheme: IconThemeData(
-        color: Colors.white,
+        color: Colors.black,
       ),
       flexibleSpace: Container(
         decoration: new BoxDecoration(
-          gradient: new LinearGradient(colors: [Colors.blue, Colors.lightBlue],
+          gradient: new LinearGradient(colors: [Color(theme),Color(theme)],
             begin: const FractionalOffset(0.0, 0.0),
             end: const FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -29,7 +31,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget
       centerTitle: true,
       title: Text(
         "dm disign",
-        style: TextStyle(fontSize: 55.0, color: Colors.white, fontFamily: "Signatra"),
+        style: TextStyle(fontSize: 55.0, color: Colors.black, fontFamily: "Signatra"),
       ),
       bottom: bottom,
       actions: [
@@ -54,19 +56,20 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget
 
                   //Video 11 o 19
                   //falta determinar la funcion de este indicador
-                  /*Positioned(
+                  Positioned(
                         top: 3.0,
                         bottom: 4.0,
+                        left: 5.8,
                         child: Consumer<CartItemCounter>(
                           builder: (context, counter, _)
                               {
                                 return Text(
-                                  counter.count.toString(),
+                                  (EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList).length - 1).toString(),
                                   style: TextStyle(color: Colors.white, fontSize: 12.0, fontWeight: FontWeight.w500),
                                 );
                               },
                         ),
-                      ),*/
+                      ),
 
                 ],
               ),

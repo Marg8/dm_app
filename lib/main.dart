@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (c) => CartItemCounter()),
-        ChangeNotifierProvider(create: (c) => CartItemCounter()),
+        ChangeNotifierProvider(create: (c) => ItemQuantity()),
         ChangeNotifierProvider(create: (c) => AddressChanger()),
         ChangeNotifierProvider(create: (c) => TotalAmount()),
       ],
@@ -102,7 +102,7 @@ class _SplashScreenState extends State<SplashScreen>
             children: [
               Image.asset("images/dm.png"),
               SizedBox(height: 20.0,),
-              Text("World's Large & Number Online Shop",
+              Text("Tienda Online",
               style: TextStyle(color: Colors.black, fontSize: 20.0, fontWeight: FontWeight.bold),
               ),
 

@@ -1,3 +1,4 @@
+import 'package:e_shop/Store/storehome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class SearchBoxDelegate extends SliverPersistentHeaderDelegate {
         },
         child: Container(
           decoration: new BoxDecoration(
-            gradient: new LinearGradient(colors: [Colors.blue, Colors.lightBlue],
+            gradient: new LinearGradient(colors: [Color(theme),Color(theme)],
               begin: const FractionalOffset(0.0, 0.0),
               end: const FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],

@@ -6,20 +6,26 @@ import '../Admin/adminOrderCard.dart';
 import '../Config/config.dart';
 import '../Config/config.dart';
 
-class CartItemCounter extends ChangeNotifier
-
-{
-  int _counter = EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList).length-1;
+class CartItemCounter extends ChangeNotifier {
+  int _counter =
+      EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList) !=
+              null
+          ? EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList).length - 1
+          : 0;
   int get count => _counter;
 
-  Future<void> displayResult() async
+  Future<void> displayResult() async {
+     int _counter =
+      EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList) !=
+              null
+          ? EcommerceApp.sharedPreferences
+                  .getStringList(EcommerceApp.userCartList)
+                  .length -
+              1
+          : 0;
 
-  {
-    int _counter = EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList).length-1;
-
-    await Future.delayed(const Duration(microseconds: 100),(){
-      notifyListeners() ;
+    await Future.delayed(const Duration(microseconds: 100), () {
+      notifyListeners();
     });
   }
-
 }
