@@ -25,7 +25,7 @@ class StoreHome extends StatefulWidget {
 }
 
 //Color Theme
-int theme = 0xffffC0CB;
+int theme = 0xffF5F9F9;
 
 class _StoreHomeState extends State<StoreHome> {
   @override
