@@ -42,7 +42,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget
               onPressed: ()
               {
                 Route route = MaterialPageRoute(builder: (c) => CartPage());
-                Navigator.pushReplacement(context, route);
+                Navigator.push(context, route);
               },
             ),
             Positioned(

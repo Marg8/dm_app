@@ -167,7 +167,7 @@ class _AdminSignInScreenState extends State<AdminSignInScreen>
               _passwordTextEditingController.text = "";
             });
             Route route = MaterialPageRoute(builder: (c) => UploadPage());
-            Navigator.pushReplacement(context, route);
+            Navigator.push(context, route);
           }
       });
     });

@@ -101,7 +101,7 @@ class _PaymentPageState extends State<PaymentPage> {
     Fluttertoast.showToast(msg: "Congratulations, your Order has been placed successfully.");
 
     Route route = MaterialPageRoute(builder: (c)=>StoreHome());
-    Navigator.pushReplacement(context, route);
+    Navigator.push(context, route);
   }
 
   Future writeOrderDetailsForUser(Map<String, dynamic> data) async

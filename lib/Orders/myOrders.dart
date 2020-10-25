@@ -40,7 +40,7 @@ class _MyOrdersState extends State<MyOrders> {
               onPressed: ()
               {
                 Route route = MaterialPageRoute(builder: (c) => StoreHome());
-                Navigator.pushReplacement(context, route);
+                Navigator.push(context, route);
               },
             ),
           ],

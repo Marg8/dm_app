@@ -40,7 +40,7 @@ class _CartPageState extends State<CartPage> {
           }
           else {
             Route route = MaterialPageRoute(builder: (c) => Address(totalAmount: totalAmount));
-            Navigator.pushReplacement(context, route);
+            Navigator.push(context, route);
           }
         },
         label: Text("Check Out"),
@@ -73,7 +73,7 @@ class _CartPageState extends State<CartPage> {
           StreamBuilder<QuerySnapshot>(
               stream: EcommerceApp.firestore
                   .collection("items")
-                  .where("shortInfo",
+                  .where("title",
                       whereIn: EcommerceApp.sharedPreferences
                           .getStringList(EcommerceApp.userCartList))
                   .snapshots(),
@@ -111,7 +111,7 @@ class _CartPageState extends State<CartPage> {
                                 return sourceInfo(model, context,
                                     removeCartFunction: () =>
                                         removeItemFromUserCart(
-                                            model.shortInfo));
+                                            model.title));
                               },
                               childCount: snapshot.hasData
                                   ? snapshot.data.documents.length
@@ -141,11 +141,11 @@ class _CartPageState extends State<CartPage> {
     );
   }
 
-  removeItemFromUserCart(String shortInfoAsId)
+  removeItemFromUserCart(String titleAsId)
   {
     List temCartList =
     EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList);
-    temCartList.remove(shortInfoAsId);
+    temCartList.remove(titleAsId);
 
     EcommerceApp.firestore
         .collection(EcommerceApp.collectionUser)

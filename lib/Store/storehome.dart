@@ -70,7 +70,7 @@ class _StoreHomeState extends State<StoreHome> {
                   ),
                   onPressed: () {
                     Route route = MaterialPageRoute(builder: (c) => CartPage());
-                    Navigator.pushReplacement(context, route);
+                    Navigator.push(context, route);
                   },
                 ),
                 Positioned(
@@ -148,7 +148,7 @@ Widget sourceInfo(ItemModel model, BuildContext context,
     onTap: () {
       Route route =
           MaterialPageRoute(builder: (c) => ProductPage(itemModel: model));
-      Navigator.pushReplacement(context, route);
+      Navigator.push(context, route);
     },
     splashColor: Colors.black,
     child: Padding(
@@ -310,7 +310,7 @@ Widget sourceInfo(ItemModel model, BuildContext context,
                                 color: Colors.black,
                               ),
                               onPressed: () {
-                                checkItemInCart(model.shortInfo, context);
+                                checkItemInCart(model.title, context);
                               },
                             )
                           : IconButton(
@@ -322,7 +322,7 @@ Widget sourceInfo(ItemModel model, BuildContext context,
                           //opcional para salir automatico
 
                           Route route = MaterialPageRoute(builder: (c) => StoreHome());
-                          Navigator.pushReplacement(context, route);
+                          Navigator.push(context, route);
 
                         },
                             ),
@@ -362,18 +362,18 @@ Widget card({Color primaryColor = Colors.redAccent, String imgPath}) {
   );
 }
 
-void checkItemInCart(String shortInfoAsID, BuildContext context) {
+void checkItemInCart(String titleAsID, BuildContext context) {
   EcommerceApp.sharedPreferences
           .getStringList(EcommerceApp.userCartList)
-          .contains(shortInfoAsID.toString())
+          .contains(titleAsID.toString())
       ? Fluttertoast.showToast(msg: "Item is alrady in Cart.")
-      : addItemToCart(shortInfoAsID, context);
+      : addItemToCart(titleAsID, context);
 }
 
-addItemToCart(String shortInfoAsID, BuildContext context) {
+addItemToCart(String titleAsID, BuildContext context) {
   List temCartList =
       EcommerceApp.sharedPreferences.getStringList(EcommerceApp.userCartList);
-  temCartList.add(shortInfoAsID);
+  temCartList.add(titleAsID);
 
   EcommerceApp.firestore
       .collection(EcommerceApp.collectionUser)

@@ -78,7 +78,7 @@ class MyDrawer extends StatelessWidget {
                      title: Text("Home", style: TextStyle(color: Colors.black),),
                      onTap: (){
                        Route route = MaterialPageRoute(builder: (c) => StoreHome());
-                       Navigator.pushReplacement(context, route);
+                       Navigator.push(context, route);
                      },
                    ),
                    Divider(height: 10.0, color: Colors.black, thickness: 4.0,),
@@ -88,7 +88,7 @@ class MyDrawer extends StatelessWidget {
                      title: Text("My Orders", style: TextStyle(color: Colors.black),),
                      onTap: (){
                        Route route = MaterialPageRoute(builder: (c) => MyOrders());
-                       Navigator.pushReplacement(context, route);
+                       Navigator.push(context, route);
                      },
                    ),
                    Divider(height: 10.0, color: Colors.black, thickness: 4.0,),
@@ -98,7 +98,7 @@ class MyDrawer extends StatelessWidget {
                      title: Text("My Cart", style: TextStyle(color: Colors.black),),
                      onTap: (){
                        Route route = MaterialPageRoute(builder: (c) => CartPage());
-                       Navigator.pushReplacement(context, route);
+                       Navigator.push(context, route);
                      },
                    ),
                    Divider(height: 10.0, color: Colors.black, thickness: 4.0,),
@@ -108,7 +108,7 @@ class MyDrawer extends StatelessWidget {
                      title: Text("Search", style: TextStyle(color: Colors.black),),
                      onTap: (){
                        Route route = MaterialPageRoute(builder: (c) => SearchProduct());
-                       Navigator.pushReplacement(context, route);
+                       Navigator.push(context, route);
                      },
                    ),
                    Divider(height: 10.0, color: Colors.black, thickness: 4.0,),
@@ -118,7 +118,7 @@ class MyDrawer extends StatelessWidget {
                      title: Text("Add New Address", style: TextStyle(color: Colors.black),),
                      onTap: (){
                        Route route = MaterialPageRoute(builder: (c) => AddAddress());
-                       Navigator.pushReplacement(context, route);
+                       Navigator.push(context, route);
                      },
                    ),
                    Divider(height: 10.0, color: Colors.black, thickness: 4.0,),
@@ -130,7 +130,7 @@ class MyDrawer extends StatelessWidget {
                        EcommerceApp.auth.signOut().then((c) {
                          Route route = MaterialPageRoute(
                              builder: (c) => AuthenticScreen());
-                         Navigator.pushReplacement(context, route);
+                         Navigator.push(context, route);
                        });
                      },
                    ),

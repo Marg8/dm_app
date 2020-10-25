@@ -144,7 +144,7 @@ class AdminStatusBanner extends StatelessWidget
             onTap: ()
             {
               Route route = MaterialPageRoute(builder: (c) => StoreHome());
-              Navigator.pushReplacement(context, route);
+              Navigator.push(context, route);
             },
             child: Container(
               child: Icon(
@@ -295,7 +295,7 @@ class AdminShippingDetails extends StatelessWidget
     getOrderId = "";
 
     Route route = MaterialPageRoute(builder: (c)=> UploadPage());
-    Navigator.pushReplacement(context, route);
+    Navigator.push(context, route);
 
     Fluttertoast.showToast(msg: "Order has been Received. Confirmed.");
   }

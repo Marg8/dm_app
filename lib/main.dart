@@ -72,12 +72,12 @@ class _SplashScreenState extends State<SplashScreen>
       if(await EcommerceApp.auth.currentUser() != null)
         {
           Route route = MaterialPageRoute(builder: (_) => StoreHome());
-          Navigator.pushReplacement(context, route);
+          Navigator.push(context, route);
         }
       else
         {
           Route route = MaterialPageRoute(builder: (_) => AuthenticScreen());
-          Navigator.pushReplacement(context, route);
+          Navigator.push(context, route);
         }
 
     });

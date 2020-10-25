@@ -51,7 +51,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
           icon: Icon(Icons.border_color, color: Colors.black,),
           onPressed: () {
             Route route = MaterialPageRoute(builder: (c) => AdminShiftOrders());
-            Navigator.pushReplacement(context, route);
+            Navigator.push(context, route);
           },
         ),
 
@@ -62,7 +62,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
               fontWeight: FontWeight.bold,),),
             onPressed: () {
               Route route = MaterialPageRoute(builder: (c) => SplashScreen());
-              Navigator.pushReplacement(context, route);
+              Navigator.push(context, route);
             },
           ),
         ],
